@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+---
+<div class="project-detail">
+  <a class="project-back" href="/projects/">⇠ Go back to portfolio</a>
+  <main>
+    <section class="project-hero">
+      <div class="project-logo">
+        {% if logo %}
+          <img src="{{ logo }}" alt="{{ title }} logo">
+        {% else %}
+          <div class="placeholder"><span>Project / Client Logo</span></div>
+        {% endif %}
+      </div>
+      <div class="project-meta">
+        <div class="meta-label">Client</div><div class="meta-value">{{ client }}</div>
+        <div class="meta-label">Project</div><div class="meta-value">{{ title }}{% if year %} ({{ year }}){% endif %}</div>
+        <div class="meta-label">Role</div><div class="meta-value">{{ role }}</div>
+      </div>
+      <div></div>
+      <p class="project-description">{{ description }}</p>
+    </section>
+
+    <section class="project-gallery" data-lightbox-gallery>
+      {% for item in images %}
+        <figure class="gallery-item layout-{{ item.layout or 'half' }}">
+          <button class="gallery-media" type="button" data-lightbox-item data-src="{{ item.image }}" data-caption="{{ item.caption | escape }}">
+            {% if item.image %}
+              <img src="{{ item.image }}" alt="{{ item.caption or title }}" loading="lazy">
+            {% else %}
+              <div class="placeholder project-image-placeholder"><span>Project image</span></div>
+            {% endif %}
+          </button>
+          {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+        </figure>
+      {% endfor %}
+    </section>
+
+    <a class="project-footer-back" href="/projects/">⇠ Go back to portfolio</a>
+  </main>
+</div>
