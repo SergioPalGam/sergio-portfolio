@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: Tasting Menu — Sergio Palomino Gámez
+permalink: /tasting-menu/index.html
+---
+{% set active = 'tasting' %}
+{% include "site-header.njk" %}
+<main class="page tasting-page">
+  <section class="tasting-gallery" data-lightbox-gallery>
+    {% for work in portfolio.tasting %}
+      <article class="tasting-item">
+        <button class="tasting-thumb {% if not work.image %}aspect-{{ work.shape or 'square' }}{% endif %}" type="button" data-lightbox-item data-src="{{ work.image }}" data-caption="">
+          {% if work.image %}
+            <img src="{{ work.image }}" alt="{{ work.alt or 'Portfolio artwork' }}" loading="lazy">
+          {% else %}
+            <div class="placeholder"><span>{{ work.alt or 'Artwork' }}</span></div>
+          {% endif %}
+        </button>
+      </article>
+    {% endfor %}
+  </section>
+</main>
