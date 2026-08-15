@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: Projects — Sergio Palomino Gámez
+permalink: /projects/index.html
+---
+{% set active = 'projects' %}
+{% include "site-header.njk" %}
+<main class="page projects-page">
+  <section class="project-grid">
+    {% set projectList = collections.project | sortByOrder %}
+    {% for project in projectList %}
+      <a class="project-card" href="{{ project.url }}">
+        {% if project.data.cover %}
+          <img src="{{ project.data.cover }}" alt="{{ project.data.title }}" loading="lazy">
+        {% else %}
+          <div class="placeholder"><span>{{ project.data.title }}</span></div>
+        {% endif %}
+        <div class="project-overlay">
+          <div>
+            <div class="project-title">{{ project.data.title }}</div>
+            {% if project.data.subtitle %}<div class="project-subtitle">{{ project.data.subtitle }}</div>{% endif %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </section>
+</main>
