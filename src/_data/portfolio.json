@@ -1,0 +1,37 @@
+{
+  "name": "Sergio Palomino Gámez",
+  "role": "Concept Artist & Character Designer",
+  "welcome": {
+    "secondsPerImage": 5,
+    "images": ["", "", "", ""]
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/lo0bo0/",
+    "linkedin": "",
+    "email": "sergiopalgam@gmail.com"
+  },
+  "tasting": [
+    {"image": "", "alt": "Artwork 01", "shape": "wide"},
+    {"image": "", "alt": "Artwork 02", "shape": "tall"},
+    {"image": "", "alt": "Artwork 03", "shape": "square"},
+    {"image": "", "alt": "Artwork 04", "shape": "portrait"},
+    {"image": "", "alt": "Artwork 05", "shape": "wide"},
+    {"image": "", "alt": "Artwork 06", "shape": "portrait"},
+    {"image": "", "alt": "Artwork 07", "shape": "banner"},
+    {"image": "", "alt": "Artwork 08", "shape": "tall"},
+    {"image": "", "alt": "Artwork 09", "shape": "square"},
+    {"image": "", "alt": "Artwork 10", "shape": "wide"},
+    {"image": "", "alt": "Artwork 11", "shape": "portrait"},
+    {"image": "", "alt": "Artwork 12", "shape": "banner"}
+  ],
+  "about": {
+    "portrait": "",
+    "clients": ["Client / Studio", "Client / Studio", "Project / Publisher", "Institution"],
+    "recognition": ["Recognition / award", "Publication", "Exhibition / talk"],
+    "paragraphs": [
+      "Sergio Palomino Gámez is a concept artist and character designer based in Guadalajara, Mexico.",
+      "Use this area for a concise description of your visual practice, professional experience and the ideas that connect your work.",
+      "Keep detailed academic or professional information in a separate CV so the artwork remains the focus."
+    ]
+  }
+}
