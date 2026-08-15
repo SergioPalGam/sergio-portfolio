@@ -1,2 +1,2 @@
-# sergio-portfolio
+# Sergio Portfolio
 sergio-portfolio
