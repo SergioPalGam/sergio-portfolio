@@ -1,0 +1,116 @@
+backend:
+  name: github
+  repo: SergioPalGam/sergio-portfolio
+  branch: main
+  base_url: https://REPLACE-WITH-OAUTH-WORKER.workers.dev
+  auth_endpoint: auth
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+editor:
+  preview: false
+
+collections:
+  - name: "site"
+    label: "Site"
+    files:
+      - label: "Welcome, Tasting Menu & About"
+        name: "portfolio"
+        file: "src/_data/portfolio.json"
+        format: "json"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - label: "Welcome"
+            name: "welcome"
+            widget: "object"
+            fields:
+              - { label: "Seconds per image", name: "secondsPerImage", widget: "number", value_type: "int", min: 1, default: 5 }
+              - label: "Background images"
+                name: "images"
+                widget: "list"
+                allow_add: true
+                field: { label: "Image", name: "image", widget: "image", required: false }
+          - label: "Social links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+          - label: "Tasting Menu"
+            name: "tasting"
+            widget: "list"
+            allow_add: true
+            collapsed: false
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Alt text", name: "alt", widget: "string", required: false }
+              - label: "Placeholder shape"
+                name: "shape"
+                widget: "select"
+                default: "square"
+                options:
+                  - { label: "Wide", value: "wide" }
+                  - { label: "Portrait", value: "portrait" }
+                  - { label: "Square", value: "square" }
+                  - { label: "Tall", value: "tall" }
+                  - { label: "Banner", value: "banner" }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Portrait", name: "portrait", widget: "image", required: false }
+              - label: "Clients / Selected work"
+                name: "clients"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+              - label: "Recognition & publications"
+                name: "recognition"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+              - label: "Biography paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "src/content/projects"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    identifier_field: "title"
+    summary: "{{order}} · {{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", min: 1, default: 1 }
+      - { label: "Cover image", name: "cover", widget: "image", required: false }
+      - { label: "Client", name: "client", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Role", name: "role", widget: "string", required: false }
+      - { label: "Project logo", name: "logo", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Project images"
+        name: "images"
+        widget: "list"
+        allow_add: true
+        collapsed: false
+        summary: "{{fields.caption}}"
+        fields:
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Caption", name: "caption", widget: "text", required: false }
+          - label: "Layout"
+            name: "layout"
+            widget: "select"
+            default: "half"
+            options:
+              - { label: "Full width", value: "full" }
+              - { label: "Half width (2 per row)", value: "half" }
+              - { label: "Third width (3 per row)", value: "third" }
+              - { label: "Quarter width (4 per row)", value: "quarter" }
