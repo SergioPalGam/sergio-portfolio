@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: About — Sergio Palomino Gámez
+permalink: /about/index.html
+---
+{% set active = 'about' %}
+{% include "site-header.njk" %}
+<main class="page about-page">
+  <section class="about-layout">
+    <div class="about-photo">
+      {% if portfolio.about.portrait %}
+        <img src="{{ portfolio.about.portrait }}" alt="Portrait of {{ portfolio.name }}">
+      {% else %}
+        <div class="placeholder"><span>Portrait</span></div>
+      {% endif %}
+    </div>
+
+    <aside class="about-side">
+      <div>
+        <h3>Clients / Selected work</h3>
+        <ul>{% for item in portfolio.about.clients %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      <div>
+        <h3>Recognition & publications</h3>
+        <ul>{% for item in portfolio.about.recognition %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+    </aside>
+
+    <div class="about-copy">
+      {% for paragraph in portfolio.about.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% if portfolio.social.email %}
+        <p>email: <a href="mailto:{{ portfolio.social.email }}">{{ portfolio.social.email }}</a></p>
+        <a class="contact-button" href="mailto:{{ portfolio.social.email }}">Contact</a>
+      {% endif %}
+    </div>
+  </section>
+</main>
