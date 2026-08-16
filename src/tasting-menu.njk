@@ -38,7 +38,7 @@ permalink: /tasting-menu/index.html
   </section>
 
   <footer class="tasting-footer">
-    <p class="tasting-footer-label">say hi:</p>
+    <p class="tasting-footer-label">{{ theme.tastingFooterLabel or 'say hi:' }}</p>
     <div class="tasting-footer-socials" aria-label="Social links">
       {% if portfolio.social.instagram %}
       <a class="tasting-social-link" href="{{ portfolio.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
