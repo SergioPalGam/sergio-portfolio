@@ -28,6 +28,7 @@
   "lightboxBackground": "#181614",
   "lightboxBackgroundOpacity": 0.88,
   "lightboxControlColor": "#ffffff",
+  "lightboxCaptionColor": "#d4ccc2",
   "lightboxOverlayBackground": "#2b2520",
   "lightboxOverlayOpacity": 0.9,
   "lightboxOverlayTextColor": "#ffffff",
