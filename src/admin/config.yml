@@ -21,17 +21,12 @@ collections:
         file: "src/_data/theme.json"
         format: "json"
         fields:
-          - { label: "Main background", name: "mainBackground", widget: "color", default: "#f7f4ec" }
-          - { label: "Card / surface background", name: "surfaceBackground", widget: "color", default: "#faf8f3" }
-          - { label: "Main text", name: "textColor", widget: "color", default: "#262320" }
-          - { label: "Muted text", name: "mutedColor", widget: "color", default: "#8c857d" }
-          - { label: "Accent color", name: "accentColor", widget: "color", default: "#d9915f" }
-          - { label: "Project background", name: "projectBackground", widget: "color", default: "#d5cfc6" }
-          - { label: "Project text", name: "projectTextColor", widget: "color", default: "#3d3935" }
-          - { label: "Welcome overlay color", name: "welcomeOverlayColor", widget: "color", default: "#d9824f" }
-          - { label: "Welcome overlay opacity", name: "welcomeOverlayOpacity", widget: "number", value_type: "float", min: 0, max: 1, step: 0.05, default: 0.3 }
-          - { label: "Welcome artwork max width (px)", name: "welcomeMaxWidth", widget: "number", value_type: "int", min: 800, max: 2400, default: 1500 }
-          - label: "Primary font"
+          - { label: "[General] Main background", name: "mainBackground", widget: "color", default: "#f7f4ec" }
+          - { label: "[General] Card / surface background", name: "surfaceBackground", widget: "color", default: "#faf8f3" }
+          - { label: "[General] Main text", name: "textColor", widget: "color", default: "#262320" }
+          - { label: "[General] Muted text", name: "mutedColor", widget: "color", default: "#8c857d" }
+          - { label: "[General] Accent color", name: "accentColor", widget: "color", default: "#d9915f" }
+          - label: "[General] Primary font"
             name: "primaryFont"
             widget: "select"
             default: "avenir"
@@ -41,7 +36,7 @@ collections:
               - { label: "Trebuchet MS", value: "trebuchet" }
               - { label: "Arial", value: "arial" }
               - { label: "Georgia", value: "georgia" }
-          - label: "Editorial font"
+          - label: "[General] Editorial font"
             name: "editorialFont"
             widget: "select"
             default: "georgia"
@@ -51,12 +46,52 @@ collections:
               - { label: "Avenir / Century Gothic", value: "avenir" }
               - { label: "Helvetica / Arial", value: "helvetica" }
               - { label: "Trebuchet MS", value: "trebuchet" }
-          - { label: "Base font size (px)", name: "baseFontSize", widget: "number", value_type: "int", min: 12, max: 24, default: 16 }
-          - { label: "Navigation font size (px)", name: "navFontSize", widget: "number", value_type: "int", min: 10, max: 20, default: 13 }
-          - { label: "Welcome name size (px)", name: "welcomeNameSize", widget: "number", value_type: "int", min: 38, max: 96, default: 64 }
-          - { label: "Welcome role size (px)", name: "welcomeRoleSize", widget: "number", value_type: "int", min: 10, max: 28, default: 14 }
-          - { label: "Project text size (px)", name: "projectFontSize", widget: "number", value_type: "int", min: 12, max: 24, default: 16 }
-          - { label: "Image caption size (px)", name: "captionFontSize", widget: "number", value_type: "int", min: 10, max: 20, default: 14 }
+          - { label: "[General] Base font size (px)", name: "baseFontSize", widget: "number", value_type: "int", min: 10, max: 24, default: 16 }
+          - { label: "[General] Navigation font size (px)", name: "navFontSize", widget: "number", value_type: "int", min: 10, max: 22, default: 13 }
+
+          - { label: "[Header] Height (px)", name: "headerHeight", widget: "number", value_type: "int", min: 90, max: 260, default: 178 }
+          - { label: "[Header] Horizontal padding (px)", name: "headerPaddingX", widget: "number", value_type: "int", min: 20, max: 120, default: 54 }
+          - { label: "[Header] Name size (px)", name: "brandNameSize", widget: "number", value_type: "int", min: 16, max: 48, default: 27 }
+          - { label: "[Header] Role size (px)", name: "brandRoleSize", widget: "number", value_type: "int", min: 10, max: 30, default: 16 }
+          - { label: "[Header] Navigation gap (px)", name: "navGap", widget: "number", value_type: "int", min: 10, max: 70, default: 32 }
+
+          - { label: "[Welcome] Artwork max width (px)", name: "welcomeMaxWidth", widget: "number", value_type: "int", min: 800, max: 2600, default: 1500 }
+          - { label: "[Welcome] Overlay color", name: "welcomeOverlayColor", widget: "color", default: "#d9824f" }
+          - { label: "[Welcome] Overlay opacity", name: "welcomeOverlayOpacity", widget: "number", value_type: "float", min: 0, max: 1, step: 0.05, default: 0.3 }
+          - { label: "[Welcome] Name size (px)", name: "welcomeNameSize", widget: "number", value_type: "int", min: 38, max: 96, default: 64 }
+          - { label: "[Welcome] Role size (px)", name: "welcomeRoleSize", widget: "number", value_type: "int", min: 10, max: 28, default: 14 }
+
+          - { label: "[Tasting Menu] Intro text size (px)", name: "tastingIntroSize", widget: "number", value_type: "int", min: 10, max: 24, default: 14 }
+          - { label: "[Tasting Menu] Gallery gap (px)", name: "tastingGalleryGap", widget: "number", value_type: "int", min: 0, max: 40, default: 14 }
+          - { label: "[Tasting Menu] Footer label size (px)", name: "tastingFooterLabelSize", widget: "number", value_type: "int", min: 10, max: 22, default: 13 }
+
+          - { label: "[Lightbox] Background color", name: "lightboxBackground", widget: "color", default: "#181614" }
+          - { label: "[Lightbox] Background opacity", name: "lightboxBackgroundOpacity", widget: "number", value_type: "float", min: 0, max: 1, step: 0.05, default: 0.88 }
+          - { label: "[Lightbox] Arrow / close color", name: "lightboxControlColor", widget: "color", default: "#ffffff" }
+          - { label: "[Lightbox] Project caption color", name: "lightboxCaptionColor", widget: "color", default: "#d4ccc2" }
+          - { label: "[Lightbox] Tasting text bar color", name: "lightboxOverlayBackground", widget: "color", default: "#2b2520" }
+          - { label: "[Lightbox] Tasting text bar opacity", name: "lightboxOverlayOpacity", widget: "number", value_type: "float", min: 0, max: 1, step: 0.05, default: 0.9 }
+          - { label: "[Lightbox] Tasting text color", name: "lightboxOverlayTextColor", widget: "color", default: "#ffffff" }
+          - { label: "[Lightbox] Tasting link color", name: "lightboxOverlayLinkColor", widget: "color", default: "#ffffff" }
+          - { label: "[Lightbox] Tasting text size (px)", name: "lightboxOverlayFontSize", widget: "number", value_type: "int", min: 10, max: 24, default: 14 }
+
+          - { label: "[Projects cards] Hover overlay color", name: "projectCardOverlayBackground", widget: "color", default: "#181513" }
+          - { label: "[Projects cards] Hover overlay opacity", name: "projectCardOverlayOpacity", widget: "number", value_type: "float", min: 0, max: 1, step: 0.05, default: 0.72 }
+          - { label: "[Projects cards] Hover text color", name: "projectCardOverlayTextColor", widget: "color", default: "#ffffff" }
+          - { label: "[Projects cards] Project title size (px)", name: "projectCardTitleSize", widget: "number", value_type: "int", min: 10, max: 32, default: 18 }
+          - { label: "[Projects cards] Project subtitle size (px)", name: "projectCardSubtitleSize", widget: "number", value_type: "int", min: 8, max: 24, default: 12 }
+
+          - { label: "[About] Heading size (px)", name: "aboutHeadingSize", widget: "number", value_type: "int", min: 8, max: 24, default: 10 }
+          - { label: "[About] List size (px)", name: "aboutListSize", widget: "number", value_type: "int", min: 10, max: 24, default: 13 }
+          - { label: "[About] Biography size (px)", name: "aboutTextSize", widget: "number", value_type: "int", min: 10, max: 26, default: 14 }
+          - { label: "[About] Contact button background", name: "contactButtonBackground", widget: "color", default: "#262320" }
+          - { label: "[About] Contact button text", name: "contactButtonTextColor", widget: "color", default: "#faf8f3" }
+
+          - { label: "[Project detail] Background", name: "projectBackground", widget: "color", default: "#d5cfc6" }
+          - { label: "[Project detail] Text", name: "projectTextColor", widget: "color", default: "#3d3935" }
+          - { label: "[Project detail] Meta label color", name: "projectLabelColor", widget: "color", default: "#d9915f" }
+          - { label: "[Project detail] Text size (px)", name: "projectFontSize", widget: "number", value_type: "int", min: 12, max: 28, default: 16 }
+          - { label: "[Project detail] Image caption size (px)", name: "captionFontSize", widget: "number", value_type: "int", min: 10, max: 22, default: 14 }
 
       - label: "Welcome, Tasting Menu & About"
         name: "portfolio"
@@ -99,9 +134,9 @@ collections:
             fields:
               - { label: "Image", name: "image", widget: "image", required: false }
               - { label: "Alt text", name: "alt", widget: "string", required: false }
-              - { label: "Hover description", name: "hoverText", widget: "text", required: false, hint: "Short text shown in the dark bar when hovering over this image." }
-              - { label: "Hover link text", name: "hoverLinkText", widget: "string", required: false, hint: "Optional linked phrase, e.g. View the full project." }
-              - { label: "Hover link URL", name: "hoverLinkUrl", widget: "string", required: false, hint: "Optional URL for the linked phrase, e.g. /projects/project-name/." }
+              - { label: "Expanded image description", name: "hoverText", widget: "text", required: false, hint: "Shown in the dark bar only when hovering over the expanded lightbox image." }
+              - { label: "Expanded image link text", name: "hoverLinkText", widget: "string", required: false, hint: "Optional linked phrase, e.g. View the full project." }
+              - { label: "Expanded image link URL", name: "hoverLinkUrl", widget: "string", required: false, hint: "Optional URL for the linked phrase, e.g. /projects/project-name/." }
               - label: "Placeholder shape"
                 name: "shape"
                 widget: "select"
