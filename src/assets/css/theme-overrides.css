@@ -1,14 +1,26 @@
 /* Global visual controls driven by Theme & Typography in Decap CMS. */
 
-/* Shared header: Tasting Menu, Projects and About use the same scale and spacing. */
-.site-header {
+/* Shared header: Tasting Menu, Projects and About use one system. */
+.site-header,
+.tasting-body .site-header,
+.projects-body .site-header,
+.about-body .site-header {
   height: var(--header-height);
   padding-left: clamp(28px, 2.55vw, var(--header-padding-x));
   padding-right: clamp(28px, 2.55vw, var(--header-padding-x));
 }
-.brand-name { font-size: var(--brand-name-size); }
-.brand-role { font-size: var(--brand-role-size); }
-.main-nav { gap: var(--nav-gap); font-size: var(--nav-font-size); }
+.brand-name,
+.tasting-body .brand-name,
+.projects-body .brand-name,
+.about-body .brand-name { font-size: var(--brand-name-size); }
+.brand-role,
+.tasting-body .brand-role,
+.projects-body .brand-role,
+.about-body .brand-role { font-size: var(--brand-role-size); }
+.main-nav,
+.tasting-body .main-nav,
+.projects-body .main-nav,
+.about-body .main-nav { gap: var(--nav-gap); font-size: var(--nav-font-size); }
 
 /* Tasting Menu */
 .tasting-intro { font-size: var(--tasting-intro-size); }
@@ -16,7 +28,7 @@
 .tasting-body .tasting-item { margin-bottom: var(--tasting-gallery-gap); }
 .tasting-footer-label { font-size: var(--tasting-footer-label-size); }
 
-/* All lightboxes share the editable dark transparent backdrop. */
+/* All lightboxes share an editable dark transparent backdrop. */
 .lightbox,
 .lightbox.lightbox--tasting {
   background: color-mix(in srgb, var(--lightbox-bg) calc(var(--lightbox-bg-opacity) * 100%), transparent) !important;
@@ -42,7 +54,7 @@
 .projects-page { padding-top: 46px; }
 .project-overlay {
   align-items: center !important;
-  justify-content: center;
+  justify-content: center !important;
   text-align: center;
   padding: 22px;
   background: color-mix(in srgb, var(--project-card-overlay-bg) calc(var(--project-card-overlay-opacity) * 100%), transparent) !important;
@@ -67,11 +79,23 @@
 .meta-label { color: var(--project-label-color); }
 
 @media (max-width: 820px) {
-  .site-header {
+  .site-header,
+  .tasting-body .site-header,
+  .projects-body .site-header,
+  .about-body .site-header {
     height: auto;
     padding: 28px 22px 24px;
   }
-  .brand-name { font-size: min(var(--brand-name-size), 22px); }
-  .brand-role { font-size: min(var(--brand-role-size), 13px); }
-  .main-nav { gap: min(var(--nav-gap), 18px); }
+  .brand-name,
+  .tasting-body .brand-name,
+  .projects-body .brand-name,
+  .about-body .brand-name { font-size: min(var(--brand-name-size), 22px); }
+  .brand-role,
+  .tasting-body .brand-role,
+  .projects-body .brand-role,
+  .about-body .brand-role { font-size: min(var(--brand-role-size), 13px); }
+  .main-nav,
+  .tasting-body .main-nav,
+  .projects-body .main-nav,
+  .about-body .main-nav { gap: min(var(--nav-gap), 18px); }
 }
