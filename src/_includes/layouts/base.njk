@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/welcome-frame.css">
   <link rel="stylesheet" href="/assets/css/tasting-menu.css">
+  <link rel="stylesheet" href="/assets/css/theme-overrides.css">
 </head>
 <body
   class="{{ bodyClass or '' }} font-primary-{{ theme.primaryFont or 'avenir' }} font-editorial-{{ theme.editorialFont or 'georgia' }}"
@@ -17,15 +18,50 @@
     --ink: {{ theme.textColor | default('#262320') }};
     --muted: {{ theme.mutedColor | default('#8c857d') }};
     --accent: {{ theme.accentColor | default('#d9915f') }};
-    --project-bg: {{ theme.projectBackground | default('#d5cfc6') }};
-    --project-ink: {{ theme.projectTextColor | default('#3d3935') }};
+
+    --header-height: {{ theme.headerHeight | default(178) }}px;
+    --header-padding-x: {{ theme.headerPaddingX | default(54) }}px;
+    --brand-name-size: {{ theme.brandNameSize | default(27) }}px;
+    --brand-role-size: {{ theme.brandRoleSize | default(16) }}px;
+    --nav-gap: {{ theme.navGap | default(32) }}px;
+
     --welcome-overlay: {{ theme.welcomeOverlayColor | default('#d9824f') }};
     --welcome-overlay-opacity: {{ theme.welcomeOverlayOpacity | default(0.3) }};
     --welcome-max-width: {{ theme.welcomeMaxWidth | default(1500) }}px;
-    --base-font-size: {{ theme.baseFontSize | default(16) }}px;
-    --nav-font-size: {{ theme.navFontSize | default(13) }}px;
     --welcome-name-size: {{ theme.welcomeNameSize | default(64) }}px;
     --welcome-role-size: {{ theme.welcomeRoleSize | default(14) }}px;
+
+    --base-font-size: {{ theme.baseFontSize | default(16) }}px;
+    --nav-font-size: {{ theme.navFontSize | default(13) }}px;
+
+    --tasting-intro-size: {{ theme.tastingIntroSize | default(14) }}px;
+    --tasting-gallery-gap: {{ theme.tastingGalleryGap | default(14) }}px;
+    --tasting-footer-label-size: {{ theme.tastingFooterLabelSize | default(13) }}px;
+
+    --lightbox-bg: {{ theme.lightboxBackground | default('#181614') }};
+    --lightbox-bg-opacity: {{ theme.lightboxBackgroundOpacity | default(0.88) }};
+    --lightbox-control-color: {{ theme.lightboxControlColor | default('#ffffff') }};
+    --lightbox-overlay-bg: {{ theme.lightboxOverlayBackground | default('#2b2520') }};
+    --lightbox-overlay-opacity: {{ theme.lightboxOverlayOpacity | default(0.9) }};
+    --lightbox-overlay-text: {{ theme.lightboxOverlayTextColor | default('#ffffff') }};
+    --lightbox-overlay-link: {{ theme.lightboxOverlayLinkColor | default('#ffffff') }};
+    --lightbox-overlay-size: {{ theme.lightboxOverlayFontSize | default(14) }}px;
+
+    --project-card-overlay-bg: {{ theme.projectCardOverlayBackground | default('#181513') }};
+    --project-card-overlay-opacity: {{ theme.projectCardOverlayOpacity | default(0.72) }};
+    --project-card-overlay-text: {{ theme.projectCardOverlayTextColor | default('#ffffff') }};
+    --project-card-title-size: {{ theme.projectCardTitleSize | default(18) }}px;
+    --project-card-subtitle-size: {{ theme.projectCardSubtitleSize | default(12) }}px;
+
+    --about-heading-size: {{ theme.aboutHeadingSize | default(10) }}px;
+    --about-list-size: {{ theme.aboutListSize | default(13) }}px;
+    --about-text-size: {{ theme.aboutTextSize | default(14) }}px;
+    --contact-bg: {{ theme.contactButtonBackground | default('#262320') }};
+    --contact-text: {{ theme.contactButtonTextColor | default('#faf8f3') }};
+
+    --project-bg: {{ theme.projectBackground | default('#d5cfc6') }};
+    --project-ink: {{ theme.projectTextColor | default('#3d3935') }};
+    --project-label-color: {{ theme.projectLabelColor | default('#d9915f') }};
     --project-font-size: {{ theme.projectFontSize | default(16) }}px;
     --caption-font-size: {{ theme.captionFontSize | default(14) }}px;
   "
