@@ -17,13 +17,25 @@ permalink: /tasting-menu/index.html
   <section class="tasting-gallery" data-lightbox-gallery>
     {% for work in portfolio.tasting %}
       <article class="tasting-item">
-        <button class="tasting-thumb {% if not work.image %}aspect-{{ work.shape or 'square' }}{% endif %}" type="button" data-lightbox-item data-src="{{ work.image }}" data-caption="">
-          {% if work.image %}
-            <img src="{{ work.image }}" alt="{{ work.alt or 'Portfolio artwork' }}" loading="lazy">
-          {% else %}
-            <div class="placeholder"><span>{{ work.alt or 'Artwork' }}</span></div>
+        <div class="tasting-media-card">
+          <button class="tasting-thumb {% if not work.image %}aspect-{{ work.shape or 'square' }}{% endif %}" type="button" data-lightbox-item data-src="{{ work.image }}" data-caption="">
+            {% if work.image %}
+              <img src="{{ work.image }}" alt="{{ work.alt or 'Portfolio artwork' }}" loading="lazy">
+            {% else %}
+              <div class="placeholder"><span>{{ work.alt or 'Artwork' }}</span></div>
+            {% endif %}
+          </button>
+
+          {% set hoverText = work.hoverText or work.alt %}
+          {% if hoverText or work.hoverLinkText %}
+          <div class="tasting-hover-bar">
+            {% if hoverText %}<span class="tasting-hover-text">{{ hoverText }}</span>{% endif %}
+            {% if work.hoverLinkText and work.hoverLinkUrl %}
+              <a class="tasting-hover-link" href="{{ work.hoverLinkUrl }}">{{ work.hoverLinkText }}</a>
+            {% endif %}
+          </div>
           {% endif %}
-        </button>
+        </div>
       </article>
     {% endfor %}
   </section>
