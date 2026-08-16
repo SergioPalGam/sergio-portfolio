@@ -4,9 +4,9 @@
     <span class="brand-role">{{ portfolio.role | lower }}</span>
   </a>
   <nav class="main-nav" aria-label="Main navigation">
-    <a href="/" {% if active == 'welcome' %}class="active"{% endif %}>Welcome</a>
-    <a href="/tasting-menu/" {% if active == 'tasting' %}class="active"{% endif %}>Tasting Menu</a>
-    <a href="/projects/" {% if active == 'projects' %}class="active"{% endif %}>Projects</a>
-    <a href="/about/" {% if active == 'about' %}class="active"{% endif %}>About</a>
+    <a href="/" {% if active == 'welcome' %}class="active"{% endif %}>{{ theme.navWelcomeLabel or 'Welcome' }}</a>
+    <a href="/tasting-menu/" {% if active == 'tasting' %}class="active"{% endif %}>{{ theme.navTastingLabel or 'Tasting Menu' }}</a>
+    <a href="/projects/" {% if active == 'projects' %}class="active"{% endif %}>{{ theme.navProjectsLabel or 'Projects' }}</a>
+    <a href="/about/" {% if active == 'about' %}class="active"{% endif %}>{{ theme.navAboutLabel or 'About' }}</a>
   </nav>
 </header>
