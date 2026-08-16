@@ -23,7 +23,7 @@ permalink: /tasting-menu/index.html
           data-lightbox-item
           data-src="{{ work.image }}"
           data-alt="{{ work.alt | escape }}"
-          data-caption="{{ work.hoverText | escape }}"
+          data-caption="{{ (work.hoverText or work.alt) | escape }}"
           data-link-text="{{ work.hoverLinkText | escape }}"
           data-link-url="{{ work.hoverLinkUrl | escape }}"
         >
