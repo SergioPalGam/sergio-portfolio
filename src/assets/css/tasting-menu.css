@@ -55,48 +55,94 @@
   margin-bottom: 14px;
 }
 
-.tasting-media-card {
+/* Keep the selection grid completely visual. */
+.tasting-body .tasting-thumb {
   position: relative;
-  overflow: hidden;
 }
 
-.tasting-hover-bar {
+/* Tasting Menu expanded view, closer to the Nicholas Kole behavior. */
+.lightbox.lightbox--tasting {
+  background: rgba(247, 244, 236, .94);
+  backdrop-filter: blur(1.5px);
+}
+
+.lightbox--tasting .lightbox-content {
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+.lightbox-tasting-frame {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  max-width: 92vw;
+  max-height: 92vh;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(38, 35, 32, .06);
+}
+
+.lightbox-tasting-frame > img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+}
+
+.lightbox-tasting-frame > .placeholder {
+  width: min(1100px, 82vw);
+  height: min(76vh, 760px);
+}
+
+.lightbox-tasting-overlay {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 4;
-  padding: 14px 18px 15px;
-  background: rgba(43, 37, 32, .88);
+  z-index: 3;
+  padding: 18px 22px 19px;
+  background: rgba(43, 37, 32, .90);
   color: #fff;
   font-family: var(--font-body);
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.5;
   opacity: 0;
   transform: translateY(100%);
   transition: opacity .22s ease, transform .22s ease;
   pointer-events: none;
 }
 
-.tasting-media-card:hover .tasting-hover-bar,
-.tasting-media-card:focus-within .tasting-hover-bar {
+.lightbox-tasting-frame:hover .lightbox-tasting-overlay,
+.lightbox-tasting-frame:focus-within .lightbox-tasting-overlay {
   opacity: 1;
   transform: translateY(0);
 }
 
-.tasting-hover-text + .tasting-hover-link {
+.lightbox-tasting-text + .lightbox-tasting-link {
   margin-left: .35em;
 }
 
-.tasting-hover-link {
+.lightbox-tasting-link {
   color: #fff;
   text-decoration: underline;
   text-underline-offset: 2px;
   pointer-events: auto;
 }
 
-.tasting-hover-link:hover {
+.lightbox-tasting-link:hover {
   color: #f2c09d;
+}
+
+.lightbox--tasting .lightbox-close,
+.lightbox--tasting .lightbox-prev,
+.lightbox--tasting .lightbox-next {
+  color: var(--ink);
+  text-shadow: 0 1px 2px rgba(255,255,255,.85);
+}
+
+.lightbox--tasting .lightbox-caption {
+  display: none;
 }
 
 .tasting-footer {
@@ -151,10 +197,10 @@
 }
 
 @media (hover: none) {
-  .tasting-hover-bar {
+  .lightbox-tasting-overlay {
     opacity: 1;
     transform: translateY(0);
-    padding: 11px 14px 12px;
+    padding: 13px 15px 14px;
     font-size: 12px;
   }
 }
@@ -187,6 +233,16 @@
     padding-top: 40px;
     margin-bottom: 52px;
     font-size: 13px;
+  }
+
+  .lightbox.lightbox--tasting {
+    padding: 30px 42px;
+  }
+
+  .lightbox-tasting-frame,
+  .lightbox-tasting-frame > img {
+    max-width: 90vw;
+    max-height: 88vh;
   }
 
   .tasting-footer {
