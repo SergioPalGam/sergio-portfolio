@@ -7,7 +7,27 @@
   <title>{{ title or portfolio.name }}</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body class="{{ bodyClass or '' }}">
+<body
+  class="{{ bodyClass or '' }} font-primary-{{ theme.primaryFont or 'avenir' }} font-editorial-{{ theme.editorialFont or 'georgia' }}"
+  style="
+    --paper: {{ theme.mainBackground | default('#f7f4ec') }};
+    --surface: {{ theme.surfaceBackground | default('#faf8f3') }};
+    --ink: {{ theme.textColor | default('#262320') }};
+    --muted: {{ theme.mutedColor | default('#8c857d') }};
+    --accent: {{ theme.accentColor | default('#d9915f') }};
+    --project-bg: {{ theme.projectBackground | default('#d5cfc6') }};
+    --project-ink: {{ theme.projectTextColor | default('#3d3935') }};
+    --welcome-overlay: {{ theme.welcomeOverlayColor | default('#d9824f') }};
+    --welcome-overlay-opacity: {{ theme.welcomeOverlayOpacity | default(0.3) }};
+    --welcome-max-width: {{ theme.welcomeMaxWidth | default(1500) }}px;
+    --base-font-size: {{ theme.baseFontSize | default(16) }}px;
+    --nav-font-size: {{ theme.navFontSize | default(13) }}px;
+    --welcome-name-size: {{ theme.welcomeNameSize | default(64) }}px;
+    --welcome-role-size: {{ theme.welcomeRoleSize | default(14) }}px;
+    --project-font-size: {{ theme.projectFontSize | default(16) }}px;
+    --caption-font-size: {{ theme.captionFontSize | default(14) }}px;
+  "
+>
   {{ content | safe }}
   <script src="/assets/js/portfolio.js" defer></script>
 </body>
