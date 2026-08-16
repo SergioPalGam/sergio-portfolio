@@ -211,47 +211,82 @@ collections:
         name: "images"
         widget: "list"
         allow_add: true
-        collapsed: false
-        summary: "{{fields.type}} · {{fields.textTitle}} {{fields.caption}}"
-        fields:
-          - label: "Card type"
-            name: "type"
-            widget: "select"
-            default: "image"
-            options:
-              - { label: "Image", value: "image" }
-              - { label: "Text only", value: "text" }
-              - { label: "Video", value: "video" }
-          - { label: "[Image] Image", name: "image", widget: "image", required: false }
-          - { label: "[Video] Video file", name: "video", widget: "file", required: false, hint: "Upload a web video file such as MP4/WebM. Keep each file under Cloudflare Pages' asset-size limit." }
-          - { label: "[Video] Poster image", name: "poster", widget: "image", required: false }
-          - { label: "[Text] Title", name: "textTitle", widget: "string", required: false }
-          - { label: "[Text] Body", name: "textBody", widget: "text", required: false }
-          - label: "[Text] Alignment"
-            name: "textAlign"
-            widget: "select"
-            default: "left"
-            required: false
-            options:
-              - { label: "Left", value: "left" }
-              - { label: "Center", value: "center" }
-              - { label: "Right", value: "right" }
-          - { label: "Caption (image/video)", name: "caption", widget: "text", required: false }
-          - label: "Width / layout"
-            name: "layout"
-            widget: "select"
-            default: "half"
-            options:
-              - { label: "Full width", value: "full" }
-              - { label: "Half width (2 per row)", value: "half" }
-              - { label: "Third width (3 per row)", value: "third" }
-              - { label: "Quarter width (4 per row)", value: "quarter" }
-          - { label: "Card height override (px)", name: "height", widget: "number", value_type: "int", min: 120, max: 1400, required: false, hint: "Optional. Overrides the project's default height for this card. Leave empty for the project default or natural height." }
-          - label: "Image/video fit"
-            name: "fit"
-            widget: "select"
-            default: "cover"
-            required: false
-            options:
-              - { label: "Cover — fill card and crop edges", value: "cover" }
-              - { label: "Contain — show complete media", value: "contain" }
+        collapsed: true
+        typeKey: "type"
+        types:
+          - label: "Image card"
+            name: "image"
+            widget: "object"
+            summary: "Image · {{fields.caption}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Caption", name: "caption", widget: "text", required: false }
+              - label: "Width / layout"
+                name: "layout"
+                widget: "select"
+                default: "half"
+                options:
+                  - { label: "Full width", value: "full" }
+                  - { label: "Half width (2 per row)", value: "half" }
+                  - { label: "Third width (3 per row)", value: "third" }
+                  - { label: "Quarter width (4 per row)", value: "quarter" }
+              - { label: "Card height override (px)", name: "height", widget: "number", value_type: "int", min: 120, max: 1400, required: false, hint: "Optional. Overrides the project's default height. Leave empty for the project default or natural height." }
+              - label: "Image fit"
+                name: "fit"
+                widget: "select"
+                default: "cover"
+                options:
+                  - { label: "Cover — fill card and crop edges", value: "cover" }
+                  - { label: "Contain — show complete image", value: "contain" }
+
+          - label: "Text card"
+            name: "text"
+            widget: "object"
+            summary: "Text · {{fields.textTitle}}"
+            fields:
+              - { label: "Title", name: "textTitle", widget: "string", required: false }
+              - { label: "Body", name: "textBody", widget: "text", required: false }
+              - label: "Alignment"
+                name: "textAlign"
+                widget: "select"
+                default: "left"
+                options:
+                  - { label: "Left", value: "left" }
+                  - { label: "Center", value: "center" }
+                  - { label: "Right", value: "right" }
+              - label: "Width / layout"
+                name: "layout"
+                widget: "select"
+                default: "half"
+                options:
+                  - { label: "Full width", value: "full" }
+                  - { label: "Half width (2 per row)", value: "half" }
+                  - { label: "Third width (3 per row)", value: "third" }
+                  - { label: "Quarter width (4 per row)", value: "quarter" }
+              - { label: "Card height override (px)", name: "height", widget: "number", value_type: "int", min: 120, max: 1400, required: false, hint: "Optional. Overrides the project's default height. Leave empty for the project default or natural height." }
+
+          - label: "Video card"
+            name: "video"
+            widget: "object"
+            summary: "Video · {{fields.caption}}"
+            fields:
+              - { label: "Video file", name: "video", widget: "file", required: false, hint: "Upload a web video file such as MP4/WebM. Keep each file under Cloudflare Pages' asset-size limit." }
+              - { label: "Poster image", name: "poster", widget: "image", required: false }
+              - { label: "Caption", name: "caption", widget: "text", required: false }
+              - label: "Width / layout"
+                name: "layout"
+                widget: "select"
+                default: "half"
+                options:
+                  - { label: "Full width", value: "full" }
+                  - { label: "Half width (2 per row)", value: "half" }
+                  - { label: "Third width (3 per row)", value: "third" }
+                  - { label: "Quarter width (4 per row)", value: "quarter" }
+              - { label: "Card height override (px)", name: "height", widget: "number", value_type: "int", min: 120, max: 1400, required: false, hint: "Optional. Overrides the project's default height. Leave empty for the project default or natural height." }
+              - label: "Video fit"
+                name: "fit"
+                widget: "select"
+                default: "cover"
+                options:
+                  - { label: "Cover — fill card and crop edges", value: "cover" }
+                  - { label: "Contain — show complete video", value: "contain" }
