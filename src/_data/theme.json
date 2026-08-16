@@ -1,0 +1,20 @@
+{
+  "mainBackground": "#f7f4ec",
+  "surfaceBackground": "#faf8f3",
+  "textColor": "#262320",
+  "mutedColor": "#8c857d",
+  "accentColor": "#d9915f",
+  "projectBackground": "#d5cfc6",
+  "projectTextColor": "#3d3935",
+  "welcomeOverlayColor": "#d9824f",
+  "welcomeOverlayOpacity": 0.3,
+  "welcomeMaxWidth": 1500,
+  "primaryFont": "avenir",
+  "editorialFont": "georgia",
+  "baseFontSize": 16,
+  "navFontSize": 13,
+  "welcomeNameSize": 64,
+  "welcomeRoleSize": 14,
+  "projectFontSize": 16,
+  "captionFontSize": 14
+}
