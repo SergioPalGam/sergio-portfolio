@@ -56,12 +56,11 @@ collections:
           - { label: "[Interface text] Welcome button: Portfolio", name: "welcomePortfolioLabel", widget: "string", default: "Portfolio" }
           - { label: "[Interface text] Welcome button: About", name: "welcomeAboutLabel", widget: "string", default: "About" }
           - { label: "[Interface text] Welcome button: Projects", name: "welcomeProjectsLabel", widget: "string", default: "Projects" }
-          - { label: "[Interface text] Tasting footer label", name: "tastingFooterLabel", widget: "string", default: "say hi:" }
+          - { label: "[Interface text] Shared footer label", name: "tastingFooterLabel", widget: "string", default: "say hi:" }
           - { label: "[Interface text] About clients heading", name: "aboutClientsHeading", widget: "string", default: "Clients / Selected work" }
           - { label: "[Interface text] About recognition heading", name: "aboutRecognitionHeading", widget: "string", default: "Recognition & publications" }
           - { label: "[Interface text] About email label", name: "aboutEmailLabel", widget: "string", default: "email:" }
           - { label: "[Interface text] About contact button", name: "aboutContactLabel", widget: "string", default: "Contact" }
-          - { label: "[Interface text] Project back link", name: "projectBackLabel", widget: "string", default: "Go back to portfolio" }
           - { label: "[Interface text] Project Client label", name: "projectClientLabel", widget: "string", default: "Client" }
           - { label: "[Interface text] Project Project label", name: "projectProjectLabel", widget: "string", default: "Project" }
           - { label: "[Interface text] Project Role label", name: "projectRoleLabel", widget: "string", default: "Role" }
@@ -104,11 +103,16 @@ collections:
           - { label: "[About] Contact button background", name: "contactButtonBackground", widget: "color", default: "#262320" }
           - { label: "[About] Contact button text", name: "contactButtonTextColor", widget: "color", default: "#faf8f3" }
 
-          - { label: "[Project detail] Background", name: "projectBackground", widget: "color", default: "#d5cfc6" }
-          - { label: "[Project detail] Text", name: "projectTextColor", widget: "color", default: "#3d3935" }
+          - { label: "[Project detail] Background", name: "projectBackground", widget: "color", default: "#f7f4ec" }
+          - { label: "[Project detail] Text", name: "projectTextColor", widget: "color", default: "#262320" }
           - { label: "[Project detail] Meta label color", name: "projectLabelColor", widget: "color", default: "#d9915f" }
           - { label: "[Project detail] Text size (px)", name: "projectFontSize", widget: "number", value_type: "int", min: 12, max: 28, default: 16 }
           - { label: "[Project detail] Image caption size (px)", name: "captionFontSize", widget: "number", value_type: "int", min: 10, max: 22, default: 14 }
+          - { label: "[Project detail] Media card background", name: "projectMediaBackground", widget: "color", default: "#faf8f3" }
+          - { label: "[Project detail] Text card background", name: "projectTextCardBackground", widget: "color", default: "#faf8f3" }
+          - { label: "[Project detail] Text card text", name: "projectTextCardTextColor", widget: "color", default: "#262320" }
+          - { label: "[Project detail] Text card title size (px)", name: "projectTextCardTitleSize", widget: "number", value_type: "int", min: 12, max: 48, default: 22 }
+          - { label: "[Project detail] Text card body size (px)", name: "projectTextCardBodySize", widget: "number", value_type: "int", min: 10, max: 28, default: 15 }
 
       - label: "Welcome, Tasting Menu & About"
         name: "portfolio"
@@ -152,8 +156,8 @@ collections:
               - { label: "Image", name: "image", widget: "image", required: false }
               - { label: "Alt text", name: "alt", widget: "string", required: false }
               - { label: "Expanded image description", name: "hoverText", widget: "text", required: false, hint: "Shown in the dark bar only when hovering over the expanded lightbox image." }
-              - { label: "Expanded image link text", name: "hoverLinkText", widget: "string", required: false, hint: "Optional linked phrase, e.g. View the full project." }
-              - { label: "Expanded image link URL", name: "hoverLinkUrl", widget: "string", required: false, hint: "Optional URL for the linked phrase, e.g. /projects/project-name/." }
+              - { label: "Expanded image link text", name: "hoverLinkText", widget: "string", required: false }
+              - { label: "Expanded image link URL", name: "hoverLinkUrl", widget: "string", required: false }
               - label: "Placeholder shape"
                 name: "shape"
                 widget: "select"
@@ -202,16 +206,38 @@ collections:
       - { label: "Role", name: "role", widget: "string", required: false }
       - { label: "Project logo", name: "logo", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text", required: false }
-      - label: "Project images"
+      - { label: "Default gallery card height (px)", name: "defaultCardHeight", widget: "number", value_type: "int", min: 160, max: 1200, required: false, hint: "Optional. Sets one shared media height for this project. Leave empty to keep natural image heights. Each card can override it." }
+      - label: "Project cards"
         name: "images"
         widget: "list"
         allow_add: true
         collapsed: false
-        summary: "{{fields.caption}}"
+        summary: "{{fields.type}} · {{fields.textTitle}} {{fields.caption}}"
         fields:
-          - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "Caption", name: "caption", widget: "text", required: false }
-          - label: "Layout"
+          - label: "Card type"
+            name: "type"
+            widget: "select"
+            default: "image"
+            options:
+              - { label: "Image", value: "image" }
+              - { label: "Text only", value: "text" }
+              - { label: "Video", value: "video" }
+          - { label: "[Image] Image", name: "image", widget: "image", required: false }
+          - { label: "[Video] Video file", name: "video", widget: "file", required: false, hint: "Upload a web video file such as MP4/WebM. Keep each file under Cloudflare Pages' asset-size limit." }
+          - { label: "[Video] Poster image", name: "poster", widget: "image", required: false }
+          - { label: "[Text] Title", name: "textTitle", widget: "string", required: false }
+          - { label: "[Text] Body", name: "textBody", widget: "text", required: false }
+          - label: "[Text] Alignment"
+            name: "textAlign"
+            widget: "select"
+            default: "left"
+            required: false
+            options:
+              - { label: "Left", value: "left" }
+              - { label: "Center", value: "center" }
+              - { label: "Right", value: "right" }
+          - { label: "Caption (image/video)", name: "caption", widget: "text", required: false }
+          - label: "Width / layout"
             name: "layout"
             widget: "select"
             default: "half"
@@ -220,3 +246,12 @@ collections:
               - { label: "Half width (2 per row)", value: "half" }
               - { label: "Third width (3 per row)", value: "third" }
               - { label: "Quarter width (4 per row)", value: "quarter" }
+          - { label: "Card height override (px)", name: "height", widget: "number", value_type: "int", min: 120, max: 1400, required: false, hint: "Optional. Overrides the project's default height for this card. Leave empty for the project default or natural height." }
+          - label: "Image/video fit"
+            name: "fit"
+            widget: "select"
+            default: "cover"
+            required: false
+            options:
+              - { label: "Cover — fill card and crop edges", value: "cover" }
+              - { label: "Contain — show complete media", value: "contain" }
