@@ -99,6 +99,9 @@ collections:
             fields:
               - { label: "Image", name: "image", widget: "image", required: false }
               - { label: "Alt text", name: "alt", widget: "string", required: false }
+              - { label: "Hover description", name: "hoverText", widget: "text", required: false, hint: "Short text shown in the dark bar when hovering over this image." }
+              - { label: "Hover link text", name: "hoverLinkText", widget: "string", required: false, hint: "Optional linked phrase, e.g. View the full project." }
+              - { label: "Hover link URL", name: "hoverLinkUrl", widget: "string", required: false, hint: "Optional URL for the linked phrase, e.g. /projects/project-name/." }
               - label: "Placeholder shape"
                 name: "shape"
                 widget: "select"
