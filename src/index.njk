@@ -15,9 +15,9 @@ permalink: /index.html
     <p class="welcome-card-role">{{ portfolio.role }}</p>
     <h1 class="welcome-card-name">Sergio<br>Palomino Gámez</h1>
     <nav class="welcome-card-nav" aria-label="Portfolio navigation">
-      <a href="/tasting-menu/">Portfolio</a>
-      <a href="/about/">About</a>
-      <a href="/projects/">Projects</a>
+      <a href="/tasting-menu/">{{ theme.welcomePortfolioLabel or 'Portfolio' }}</a>
+      <a href="/about/">{{ theme.welcomeAboutLabel or 'About' }}</a>
+      <a href="/projects/">{{ theme.welcomeProjectsLabel or 'Projects' }}</a>
     </nav>
   </section>
 
