@@ -37,24 +37,5 @@ permalink: /tasting-menu/index.html
     {% endfor %}
   </section>
 
-  <footer class="tasting-footer">
-    <p class="tasting-footer-label">{{ theme.tastingFooterLabel or 'say hi:' }}</p>
-    <div class="tasting-footer-socials" aria-label="Social links">
-      {% if portfolio.social.instagram %}
-      <a class="tasting-social-link" href="{{ portfolio.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle class="social-dot" cx="17.4" cy="6.8" r="1"></circle></svg>
-      </a>
-      {% endif %}
-      {% if portfolio.social.linkedin %}
-      <a class="tasting-social-link" href="{{ portfolio.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9v9"></path><path d="M6.5 6.2h.01"></path><path d="M10.5 18v-5.1c0-2.6 1.5-4.1 3.6-4.1 2.2 0 3.4 1.5 3.4 4.1V18"></path><path d="M10.5 9v9"></path></svg>
-      </a>
-      {% endif %}
-      {% if portfolio.social.email %}
-      <a class="tasting-social-link" href="mailto:{{ portfolio.social.email }}" aria-label="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z"></path><path d="m4.3 7.3 7.7 6 7.7-6"></path></svg>
-      </a>
-      {% endif %}
-    </div>
-  </footer>
+  {% include "social-footer.njk" %}
 </main>
