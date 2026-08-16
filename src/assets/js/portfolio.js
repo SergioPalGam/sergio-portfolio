@@ -28,29 +28,96 @@
 
   let items = [];
   let index = 0;
+  let mode = 'default';
   const content = lightbox.querySelector('.lightbox-content');
   const caption = lightbox.querySelector('.lightbox-caption');
 
+  function createPlaceholder(label) {
+    const placeholder = document.createElement('div');
+    placeholder.className = 'placeholder';
+    const span = document.createElement('span');
+    span.textContent = label || 'Artwork';
+    placeholder.appendChild(span);
+    return placeholder;
+  }
+
   function render() {
     const item = items[index];
+    if (!item) return;
+
     const src = item.dataset.src || '';
-    const fallback = item.querySelector('.placeholder')?.textContent?.trim() || 'Artwork';
-    content.innerHTML = src
-      ? `<img src="${src}" alt="">`
-      : `<div class="placeholder"><span>${fallback}</span></div>`;
-    caption.textContent = item.dataset.caption || '';
+    const alt = item.dataset.alt || '';
+    const fallback = item.querySelector('.placeholder')?.textContent?.trim() || alt || 'Artwork';
+    const description = item.dataset.caption || '';
+    const linkText = item.dataset.linkText || '';
+    const linkUrl = item.dataset.linkUrl || '';
+
+    content.replaceChildren();
+    caption.textContent = '';
+
+    lightbox.classList.toggle('lightbox--tasting', mode === 'tasting');
+
+    if (mode === 'tasting') {
+      const frame = document.createElement('div');
+      frame.className = 'lightbox-tasting-frame';
+
+      if (src) {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        frame.appendChild(img);
+      } else {
+        frame.appendChild(createPlaceholder(fallback));
+      }
+
+      if (description || (linkText && linkUrl)) {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox-tasting-overlay';
+
+        if (description) {
+          const text = document.createElement('span');
+          text.className = 'lightbox-tasting-text';
+          text.textContent = description;
+          overlay.appendChild(text);
+        }
+
+        if (linkText && linkUrl) {
+          const link = document.createElement('a');
+          link.className = 'lightbox-tasting-link';
+          link.href = linkUrl;
+          link.textContent = linkText;
+          overlay.appendChild(link);
+        }
+
+        frame.appendChild(overlay);
+      }
+
+      content.appendChild(frame);
+      return;
+    }
+
+    if (src) {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = alt;
+      content.appendChild(img);
+    } else {
+      content.appendChild(createPlaceholder(fallback));
+    }
+    caption.textContent = description;
   }
 
   function open(group, start) {
     items = [...group.querySelectorAll('[data-lightbox-item]')];
     index = start;
+    mode = group.dataset.lightboxMode || 'default';
     render();
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
   function close() {
-    lightbox.classList.remove('open');
+    lightbox.classList.remove('open', 'lightbox--tasting');
     document.body.style.overflow = '';
   }
 
