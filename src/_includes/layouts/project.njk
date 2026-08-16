@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 <div class="project-detail">
-  <a class="project-back" href="/projects/">⇠ Go back to portfolio</a>
+  <a class="project-back" href="/projects/">⇠ {{ theme.projectBackLabel or 'Go back to portfolio' }}</a>
   <main>
     <section class="project-hero">
       <div class="project-logo">
@@ -13,9 +13,9 @@ layout: layouts/base.njk
         {% endif %}
       </div>
       <div class="project-meta">
-        <div class="meta-label">Client</div><div class="meta-value">{{ client }}</div>
-        <div class="meta-label">Project</div><div class="meta-value">{{ title }}{% if year %} ({{ year }}){% endif %}</div>
-        <div class="meta-label">Role</div><div class="meta-value">{{ role }}</div>
+        <div class="meta-label">{{ theme.projectClientLabel or 'Client' }}</div><div class="meta-value">{{ client }}</div>
+        <div class="meta-label">{{ theme.projectProjectLabel or 'Project' }}</div><div class="meta-value">{{ title }}{% if year %} ({{ year }}){% endif %}</div>
+        <div class="meta-label">{{ theme.projectRoleLabel or 'Role' }}</div><div class="meta-value">{{ role }}</div>
       </div>
       <div></div>
       <p class="project-description">{{ description }}</p>
@@ -36,6 +36,6 @@ layout: layouts/base.njk
       {% endfor %}
     </section>
 
-    <a class="project-footer-back" href="/projects/">⇠ Go back to portfolio</a>
+    <a class="project-footer-back" href="/projects/">⇠ {{ theme.projectBackLabel or 'Go back to portfolio' }}</a>
   </main>
 </div>
