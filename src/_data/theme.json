@@ -64,8 +64,8 @@
   "contactButtonBackground": "#262320",
   "contactButtonTextColor": "#faf8f3",
 
-  "projectBackground": "#d5cfc6",
-  "projectTextColor": "#3d3935",
+  "projectBackground": "#f7f4ec",
+  "projectTextColor": "#262320",
   "projectLabelColor": "#d9915f",
   "projectFontSize": 16,
   "captionFontSize": 14
