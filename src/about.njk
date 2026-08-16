@@ -18,11 +18,11 @@ permalink: /about/index.html
 
     <aside class="about-side">
       <div>
-        <h3>Clients / Selected work</h3>
+        <h3>{{ theme.aboutClientsHeading or 'Clients / Selected work' }}</h3>
         <ul>{% for item in portfolio.about.clients %}<li>{{ item }}</li>{% endfor %}</ul>
       </div>
       <div>
-        <h3>Recognition & publications</h3>
+        <h3>{{ theme.aboutRecognitionHeading or 'Recognition & publications' }}</h3>
         <ul>{% for item in portfolio.about.recognition %}<li>{{ item }}</li>{% endfor %}</ul>
       </div>
     </aside>
@@ -30,8 +30,8 @@ permalink: /about/index.html
     <div class="about-copy">
       {% for paragraph in portfolio.about.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
       {% if portfolio.social.email %}
-        <p>email: <a href="mailto:{{ portfolio.social.email }}">{{ portfolio.social.email }}</a></p>
-        <a class="contact-button" href="mailto:{{ portfolio.social.email }}">Contact</a>
+        <p>{{ theme.aboutEmailLabel or 'email:' }} <a href="mailto:{{ portfolio.social.email }}">{{ portfolio.social.email }}</a></p>
+        <a class="contact-button" href="mailto:{{ portfolio.social.email }}">{{ theme.aboutContactLabel or 'Contact' }}</a>
       {% endif %}
     </div>
   </section>
