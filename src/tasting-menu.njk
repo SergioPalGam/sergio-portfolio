@@ -7,16 +7,12 @@ permalink: /tasting-menu/index.html
 {% set active = 'tasting' %}
 {% include "site-header.njk" %}
 <main class="page tasting-page">
-  {% if portfolio.tastingIntro %}
   <section class="tasting-intro" aria-label="Tasting Menu introduction">
     <p>
-      {{ portfolio.tastingIntro.text }}
-      {% if portfolio.tastingIntro.linkText and portfolio.tastingIntro.linkUrl %}
-        <a href="{{ portfolio.tastingIntro.linkUrl }}">{{ portfolio.tastingIntro.linkText }}</a>
-      {% endif %}
+      {{ portfolio.tastingIntro.text or 'A selection of visual development, character design and illustration work.' }}
+      <a href="{{ portfolio.tastingIntro.linkUrl or '/projects/' }}">{{ portfolio.tastingIntro.linkText or 'View full projects' }}</a>
     </p>
   </section>
-  {% endif %}
 
   <section class="tasting-gallery" data-lightbox-gallery>
     {% for work in portfolio.tasting %}
