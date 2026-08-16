@@ -55,6 +55,50 @@
   margin-bottom: 14px;
 }
 
+.tasting-media-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.tasting-hover-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  padding: 14px 18px 15px;
+  background: rgba(43, 37, 32, .88);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.45;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity .22s ease, transform .22s ease;
+  pointer-events: none;
+}
+
+.tasting-media-card:hover .tasting-hover-bar,
+.tasting-media-card:focus-within .tasting-hover-bar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tasting-hover-text + .tasting-hover-link {
+  margin-left: .35em;
+}
+
+.tasting-hover-link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  pointer-events: auto;
+}
+
+.tasting-hover-link:hover {
+  color: #f2c09d;
+}
+
 .tasting-footer {
   margin-top: 120px;
   padding: 105px 0 145px;
@@ -104,6 +148,15 @@
 .tasting-social-link svg .social-dot {
   fill: currentColor;
   stroke: none;
+}
+
+@media (hover: none) {
+  .tasting-hover-bar {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 11px 14px 12px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 820px) {
