@@ -49,6 +49,23 @@ collections:
           - { label: "[General] Base font size (px)", name: "baseFontSize", widget: "number", value_type: "int", min: 10, max: 24, default: 16 }
           - { label: "[General] Navigation font size (px)", name: "navFontSize", widget: "number", value_type: "int", min: 10, max: 22, default: 13 }
 
+          - { label: "[Interface text] Header: Welcome", name: "navWelcomeLabel", widget: "string", default: "Welcome" }
+          - { label: "[Interface text] Header: Tasting Menu", name: "navTastingLabel", widget: "string", default: "Tasting Menu" }
+          - { label: "[Interface text] Header: Projects", name: "navProjectsLabel", widget: "string", default: "Projects" }
+          - { label: "[Interface text] Header: About", name: "navAboutLabel", widget: "string", default: "About" }
+          - { label: "[Interface text] Welcome button: Portfolio", name: "welcomePortfolioLabel", widget: "string", default: "Portfolio" }
+          - { label: "[Interface text] Welcome button: About", name: "welcomeAboutLabel", widget: "string", default: "About" }
+          - { label: "[Interface text] Welcome button: Projects", name: "welcomeProjectsLabel", widget: "string", default: "Projects" }
+          - { label: "[Interface text] Tasting footer label", name: "tastingFooterLabel", widget: "string", default: "say hi:" }
+          - { label: "[Interface text] About clients heading", name: "aboutClientsHeading", widget: "string", default: "Clients / Selected work" }
+          - { label: "[Interface text] About recognition heading", name: "aboutRecognitionHeading", widget: "string", default: "Recognition & publications" }
+          - { label: "[Interface text] About email label", name: "aboutEmailLabel", widget: "string", default: "email:" }
+          - { label: "[Interface text] About contact button", name: "aboutContactLabel", widget: "string", default: "Contact" }
+          - { label: "[Interface text] Project back link", name: "projectBackLabel", widget: "string", default: "Go back to portfolio" }
+          - { label: "[Interface text] Project Client label", name: "projectClientLabel", widget: "string", default: "Client" }
+          - { label: "[Interface text] Project Project label", name: "projectProjectLabel", widget: "string", default: "Project" }
+          - { label: "[Interface text] Project Role label", name: "projectRoleLabel", widget: "string", default: "Role" }
+
           - { label: "[Header] Height (px)", name: "headerHeight", widget: "number", value_type: "int", min: 90, max: 260, default: 178 }
           - { label: "[Header] Horizontal padding (px)", name: "headerPaddingX", widget: "number", value_type: "int", min: 20, max: 120, default: 54 }
           - { label: "[Header] Name size (px)", name: "brandNameSize", widget: "number", value_type: "int", min: 16, max: 48, default: 27 }
