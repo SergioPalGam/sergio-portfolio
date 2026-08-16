@@ -21,7 +21,6 @@
   "aboutRecognitionHeading": "Recognition & publications",
   "aboutEmailLabel": "email:",
   "aboutContactLabel": "Contact",
-  "projectBackLabel": "Go back to portfolio",
   "projectClientLabel": "Client",
   "projectProjectLabel": "Project",
   "projectRoleLabel": "Role",
@@ -68,5 +67,10 @@
   "projectTextColor": "#262320",
   "projectLabelColor": "#d9915f",
   "projectFontSize": 16,
-  "captionFontSize": 14
+  "captionFontSize": 14,
+  "projectMediaBackground": "#faf8f3",
+  "projectTextCardBackground": "#faf8f3",
+  "projectTextCardTextColor": "#262320",
+  "projectTextCardTitleSize": 22,
+  "projectTextCardBodySize": 15
 }
