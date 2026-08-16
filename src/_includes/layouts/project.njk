@@ -7,10 +7,6 @@ bodyClass: project-body
 
 <div class="project-detail">
   <main>
-    <div class="project-topbar">
-      <a class="project-back" href="/projects/">⇠ {{ theme.projectBackLabel or 'Go back to portfolio' }}</a>
-    </div>
-
     <section class="project-hero">
       <div class="project-logo">
         {% if logo %}
@@ -30,19 +26,51 @@ bodyClass: project-body
 
     <section class="project-gallery" data-lightbox-gallery>
       {% for item in images %}
-        <figure class="gallery-item layout-{{ item.layout or 'half' }}">
-          <button class="gallery-media" type="button" data-lightbox-item data-src="{{ item.image }}" data-caption="{{ item.caption | escape }}">
-            {% if item.image %}
-              <img src="{{ item.image }}" alt="{{ item.caption or title }}" loading="lazy">
-            {% else %}
-              <div class="placeholder project-image-placeholder"><span>Project image</span></div>
-            {% endif %}
-          </button>
-          {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+        {% set cardType = item.type or 'image' %}
+        {% set cardHeight = item.height or defaultCardHeight %}
+        <figure
+          class="gallery-item project-content-card layout-{{ item.layout or 'half' }} card-type-{{ cardType }}{% if cardHeight %} has-fixed-height{% endif %}"
+          {% if cardHeight %}style="--card-height: {{ cardHeight }}px"{% endif %}
+        >
+          {% if cardType == 'text' %}
+            <article class="project-text-card text-align-{{ item.textAlign or 'left' }}">
+              {% if item.textTitle %}<h3>{{ item.textTitle }}</h3>{% endif %}
+              {% if item.textBody %}<div class="project-text-body">{{ item.textBody }}</div>{% endif %}
+            </article>
+
+          {% elif cardType == 'video' %}
+            <div class="project-video-card media-fit-{{ item.fit or 'cover' }}">
+              {% if item.video %}
+                <video controls playsinline preload="metadata" {% if item.poster %}poster="{{ item.poster }}"{% endif %}>
+                  <source src="{{ item.video }}">
+                  Your browser does not support HTML5 video.
+                </video>
+              {% else %}
+                <div class="placeholder project-image-placeholder"><span>Project video</span></div>
+              {% endif %}
+            </div>
+            {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+
+          {% else %}
+            <button
+              class="gallery-media media-fit-{{ item.fit or 'cover' }}"
+              type="button"
+              data-lightbox-item
+              data-src="{{ item.image }}"
+              data-caption="{{ item.caption | escape }}"
+            >
+              {% if item.image %}
+                <img src="{{ item.image }}" alt="{{ item.caption or title }}" loading="lazy">
+              {% else %}
+                <div class="placeholder project-image-placeholder"><span>Project image</span></div>
+              {% endif %}
+            </button>
+            {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
+          {% endif %}
         </figure>
       {% endfor %}
     </section>
 
-    <a class="project-footer-back" href="/projects/">⇠ {{ theme.projectBackLabel or 'Go back to portfolio' }}</a>
+    {% include "social-footer.njk" %}
   </main>
 </div>
