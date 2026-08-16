@@ -65,6 +65,11 @@
     --project-label-color: {{ theme.projectLabelColor | default('#d9915f') }};
     --project-font-size: {{ theme.projectFontSize | default(16) }}px;
     --caption-font-size: {{ theme.captionFontSize | default(14) }}px;
+    --project-media-bg: {{ theme.projectMediaBackground | default('#faf8f3') }};
+    --project-text-card-bg: {{ theme.projectTextCardBackground | default('#faf8f3') }};
+    --project-text-card-ink: {{ theme.projectTextCardTextColor | default('#262320') }};
+    --project-text-card-title-size: {{ theme.projectTextCardTitleSize | default(22) }}px;
+    --project-text-card-body-size: {{ theme.projectTextCardBodySize | default(15) }}px;
   "
 >
   {{ content | safe }}
