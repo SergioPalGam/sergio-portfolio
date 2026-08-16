@@ -6,7 +6,7 @@ cover: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/34445ed2-f4f8-4
 client: ""
 year: "2016"
 role: Concept Artist
-logo: ""
+logo: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/34445ed2-f4f8-4fc7-b040-00de133552d7/d9aoqsh-3f17e106-b6ee-459d-a8c0-be24c7d8f9bc.jpg/v1/fit/w_828,h_1168,q_70,strp/draw_or_die_ascension_24_nes_castlevania_cover_a_by_lo0bo0_d9aoqsh-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI2OSIsInBhdGgiOiIvZi8zNDQ0NWVkMi1mNGY4LTRmYzctYjA0MC0wMGRlMTMzNTUyZDcvZDlhb3FzaC0zZjE3ZTEwNi1iNmVlLTQ1OWQtYThjMC1iZTI0YzdkOGY5YmMuanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.T3cyAOIUUBHWCTXpWhS46v_jtz98v_tk5nlecOW0LSc
 description: Use this opening paragraph to explain what the project was, what
   you were responsible for, and the visual problem you were solving. Keep it
   concise so the artwork remains the main focus.
