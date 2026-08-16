@@ -27,6 +27,8 @@ images:
     caption: Final concept — the approved design with the key decisions consolidated
       into one image.
     layout: full
+  - layout: full
+    caption: "este texto ees prueba jpara ver ais "
   - image: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/34445ed2-f4f8-4fc7-b040-00de133552d7/d9kbqls-8b5c3483-0c8f-4511-9520-d910f1dc1f9b.jpg/v1/fit/w_582,h_900,q_70,strp/promotional_gabriel_los_by_lo0bo0_d9kbqls-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6Ii9mLzM0NDQ1ZWQyLWY0ZjgtNGZjNy1iMDQwLTAwZGUxMzM1NTJkNy9kOWticWxzLThiNWMzNDgzLTBjOGYtNDUxMS05NTIwLWQ5MTBmMWRjMWY5Yi5qcGciLCJ3aWR0aCI6Ijw9NTgyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.g3BG1ewjuRfl8ggh9qSYqi5TsmCXONPANl_pZEr7axM
     caption: Detail and process — construction, expressions, material callouts or
       production notes.
