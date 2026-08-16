@@ -3,31 +3,93 @@
   "role": "Concept Artist & Character Designer",
   "welcome": {
     "secondsPerImage": 5,
-    "images": ["", "", "", ""]
+    "images": [
+      "/assets/uploads/krea2_identity_edit_00004_.png",
+      "/assets/uploads/comfyui_00439_.png",
+      "/assets/uploads/comfyui_00435_.png",
+      "/assets/uploads/comfyui_00446_.png"
+    ]
   },
   "social": {
     "instagram": "https://www.instagram.com/lo0bo0/",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/sergiopal/",
     "email": "sergiopalgam@gmail.com"
   },
   "tasting": [
-    {"image": "", "alt": "Artwork 01", "shape": "wide"},
-    {"image": "", "alt": "Artwork 02", "shape": "tall"},
-    {"image": "", "alt": "Artwork 03", "shape": "square"},
-    {"image": "", "alt": "Artwork 04", "shape": "portrait"},
-    {"image": "", "alt": "Artwork 05", "shape": "wide"},
-    {"image": "", "alt": "Artwork 06", "shape": "portrait"},
-    {"image": "", "alt": "Artwork 07", "shape": "banner"},
-    {"image": "", "alt": "Artwork 08", "shape": "tall"},
-    {"image": "", "alt": "Artwork 09", "shape": "square"},
-    {"image": "", "alt": "Artwork 10", "shape": "wide"},
-    {"image": "", "alt": "Artwork 11", "shape": "portrait"},
-    {"image": "", "alt": "Artwork 12", "shape": "banner"}
+    {
+      "image": "/assets/uploads/krea2_identity_edit_00004_.png",
+      "alt": "Artwork 01",
+      "shape": "wide"
+    },
+    {
+      "image": "/assets/uploads/krea2_edit_00004_.png",
+      "alt": "Artwork 02",
+      "shape": "tall"
+    },
+    {
+      "image": "/assets/uploads/comfyui_00439_.png",
+      "alt": "Artwork 03",
+      "shape": "square"
+    },
+    {
+      "image": "/assets/uploads/comfyui_00435_.png",
+      "alt": "Artwork 04",
+      "shape": "portrait"
+    },
+    {
+      "image": "/assets/uploads/comfyui_00446_.png",
+      "alt": "Artwork 05",
+      "shape": "wide"
+    },
+    {
+      "image": "/assets/uploads/comfyui_00449_.png",
+      "alt": "Artwork 06",
+      "shape": "portrait"
+    },
+    {
+      "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/34445ed2-f4f8-4fc7-b040-00de133552d7/d9ps5al-2b2cbe19-da0e-455f-b3a2-530ac3e7b094.jpg/v1/fit/w_582,h_900,q_70,strp/pokemon_project_016_pidgey_bylo0bo0_by_lo0bo0_d9ps5al-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6Ii9mLzM0NDQ1ZWQyLWY0ZjgtNGZjNy1iMDQwLTAwZGUxMzM1NTJkNy9kOXBzNWFsLTJiMmNiZTE5LWRhMGUtNDU1Zi1iM2EyLTUzMGFjM2U3YjA5NC5qcGciLCJ3aWR0aCI6Ijw9NTgyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.VDCINid3Hvg2_YKjiVcLfTC0mPZFEqZ7fIRlulU0z9I",
+      "alt": "Artwork 07",
+      "shape": "banner"
+    },
+    {
+      "image": "",
+      "alt": "Artwork 08",
+      "shape": "tall"
+    },
+    {
+      "image": "",
+      "alt": "Artwork 09",
+      "shape": "square"
+    },
+    {
+      "image": "",
+      "alt": "Artwork 10",
+      "shape": "wide"
+    },
+    {
+      "image": "",
+      "alt": "Artwork 11",
+      "shape": "portrait"
+    },
+    {
+      "image": "",
+      "alt": "Artwork 12",
+      "shape": "banner"
+    }
   ],
   "about": {
     "portrait": "",
-    "clients": ["Client / Studio", "Client / Studio", "Project / Publisher", "Institution"],
-    "recognition": ["Recognition / award", "Publication", "Exhibition / talk"],
+    "clients": [
+      "Client / Studio",
+      "Client / Studio",
+      "Project / Publisher",
+      "Institution"
+    ],
+    "recognition": [
+      "Recognition / award",
+      "Publication",
+      "Exhibition / talk"
+    ],
     "paragraphs": [
       "Sergio Palomino Gámez is a concept artist and character designer based in Guadalajara, Mexico.",
       "Use this area for a concise description of your visual practice, professional experience and the ideas that connect your work.",
