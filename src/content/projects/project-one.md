@@ -21,13 +21,13 @@ images:
     caption: ""
     layout: third
     type: image
-    fit: contain
+    fit: cover
   - image: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/34445ed2-f4f8-4fc7-b040-00de133552d7/d98dsud-e708a131-b81f-48d3-a5f3-d2d078dd2576.jpg/v1/fit/w_828,h_1214,q_70,strp/dracula_castlevania_by_lo0bo0_d98dsud-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMxOSIsInBhdGgiOiIvZi8zNDQ0NWVkMi1mNGY4LTRmYzctYjA0MC0wMGRlMTMzNTUyZDcvZDk4ZHN1ZC1lNzA4YTEzMS1iODFmLTQ4ZDMtYTVmMy1kMmQwNzhkZDI1NzYuanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3sPtHJJLVf8_tsi0r4YU33A5DMjJH2XT9NpdH3O6MEw
     caption: Variation studies — alternatives in costume, shape language, props or
       materials.
     layout: third
     type: image
-    fit: contain
+    fit: cover
   - image: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/34445ed2-f4f8-4fc7-b040-00de133552d7/d9d3dey-118baecc-9ccd-4b8b-a0e7-88c03d5fa67b.jpg/v1/fill/w_1305,h_612,q_70,strp/drawordieascencion24_progression_by_lo0bo0_d9d3dey-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkwMCIsInBhdGgiOiIvZi8zNDQ0NWVkMi1mNGY4LTRmYzctYjA0MC0wMGRlMTMzNTUyZDcvZDlkM2RleS0xMThiYWVjYy05Y2NkLTRiOGItYTBlNy04OGMwM2Q1ZmE2N2IuanBnIiwid2lkdGgiOiI8PTQwNTAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.f7HRVfz6fdKpGaqIpODltNfq54LB6AzHe6MutK5eE1M
     caption: Final concept — the approved design with the key decisions consolidated
       into one image.
