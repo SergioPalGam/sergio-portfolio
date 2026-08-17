@@ -16,8 +16,8 @@ images:
       visual directions.
     layout: third
     type: image
-    fit: cover
-    height: 500
+    fit: contain
+    height: ""
   - image: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/34445ed2-f4f8-4fc7-b040-00de133552d7/d9av5d4-1affd6a5-9686-4453-b9e0-56d07befba7a.jpg/v1/fit/w_828,h_1168,q_70,strp/ascencion24_cover0_by_lo0bo0_d9av5d4-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI2OSIsInBhdGgiOiIvZi8zNDQ0NWVkMi1mNGY4LTRmYzctYjA0MC0wMGRlMTMzNTUyZDcvZDlhdjVkNC0xYWZmZDZhNS05Njg2LTQ0NTMtYjllMC01NmQwN2JlZmJhN2EuanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RgOoOwaOb-5ldkbKIGvNLlCPB_pqtnQlYeckYODSrQY
     caption: ""
     layout: third
